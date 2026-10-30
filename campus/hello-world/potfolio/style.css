@@ -1,0 +1,48 @@
+body {
+    background-color: rgb(35, 162, 44);
+    font-family: "Times New Roman", serif;
+}
+
+h1 {
+    color: purple;
+}
+
+h2 {
+    color: rgb(139, 0, 0);
+}
+
+h3 {
+    color: darkgreen;
+}
+
+/* Type selector */
+body {
+    background-color: rgb(203, 203, 255);
+    font-family: "Times New Roman", serif;
+    margin: 20px;
+}
+
+p {
+    color: darkblue;
+    padding: 10px;
+    border: 2px solid purple;
+    margin: 15px;
+}
+
+/* ID selector */
+#intro {
+    color: rgb(19, 0, 128);
+    background-color: rgb(214, 214, 6);
+    padding: 15px;
+    border: 3px solid rgb(128, 0, 77);
+    margin: 20px;
+}
+
+/* Class selector */
+.about {
+    color: darkblue;
+    background-color: rgb(255, 240, 224);
+    padding: 10px;
+    border: 2px solid rgb(28, 0, 128);
+    margin: 15px;
+}
