@@ -58,7 +58,7 @@ p {
     }
 }
 
-@media (min-width: 1200) {
+@media (min-width: 1200px) {
     .card-grid {
         grid-template-columns: repeat(3, 1fr);
     }
