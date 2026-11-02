@@ -1,55 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap");
 
 body {
-    background-color: rgb(35, 162, 44);
-    font-family: "Times New Roman", serif;
-}
-
-h1 {
-    color: purple;
-}
-
-h2 {
-    color: rgb(139, 0, 0);
-}
-
-h3 {
-    color: darkgreen;
-}
-
-/* Type selector */
-body {
-    background-color: rgb(203, 203, 255);
-    font-family: "Times New Roman", serif;
     margin: 20px;
+    background-color: #f5f4ed;
+    color: #20302b;
+    font-family: "DM Sans", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Playfair Display", Georgia, serif;
+}
+
+#intro {
+    color: #28634e;
 }
 
 p {
-    color: darkblue;
-    padding: 10px;
-    border: 2px solid purple;
-    margin: 15px;
+    color: #52635c;
 }
 
-/* ID selector */
-#intro {
-    color: rgb(19, 0, 128);
-    background-color: rgb(214, 214, 6);
-    padding: 15px;
-    border: 3px solid rgb(128, 0, 77);
-    margin: 20px;
-}
-
-/* Class selector */
-.about {
-    color: darkblue;
-    background-color: rgb(255, 240, 224);
-    padding: 10px;
-    border: 2px solid rgb(28, 0, 128);
-    margin: 15px;
-}
-
-.card-grid{
+.card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+}
+
+.card-grid > div {
+    padding: 20px;
+    border: 1px solid #d7dfd8;
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+
+.about {
+    color: #28634e;
+}
+
+.card-grid img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 479px) {
+    body {
+        margin: 16px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
 }
