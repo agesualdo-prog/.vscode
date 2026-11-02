@@ -1,8 +1,12 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+</style>
+
 body {
     margin: 0;
     background-color: #f5f4ed;
     color: #20302b;
-    font-family: "DM Sans", Arial, sans-serif;
+    font-family: "Cedarville Cursive", Arial, sans-serif;
     line-height: 1.6;
 }
 
