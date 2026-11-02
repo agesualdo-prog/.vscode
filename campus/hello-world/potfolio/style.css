@@ -1,6 +1,4 @@
-<style>
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
-</style>
 
 body {
     margin: 0;
@@ -31,7 +29,7 @@ header {
 h1,
 h2,
 h3 {
-    font-family: "Playfair Display", Georgia, serif;
+    font-family: "Cedarville Cursive", Georgia, serif;
 }
 
 header h1 {
