@@ -1,55 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap");
+
+:root {
+    --ink: #20302b;
+    --muted: #52635c;
+    --paper: #f5f4ed;
+    --card: #fff;
+    --accent: #28634e;
+    --accent-light: #dcebe1;
+    --line: #d7dfd8;
+}
+
+* {
+    box-sizing: border-box;
+}
 
 body {
-    background-color: rgb(35, 162, 44);
-    font-family: "Times New Roman", serif;
+    margin: 0;
+    padding: 24px;
+    background: var(--paper);
+    color: var(--ink);
+    font: 16px/1.6 "DM Sans", sans-serif;
 }
 
-h1 {
-    color: purple;
+body > h1,
+body > h3,
+.card-grid {
+    width: min(100%, 1120px);
+    margin-right: auto;
+    margin-left: auto;
 }
 
-h2 {
-    color: rgb(139, 0, 0);
-}
-
+h1,
+h2,
 h3 {
-    color: darkgreen;
+    font-family: "Playfair Display", Georgia, serif;
+    line-height: 1.2;
 }
 
-/* Type selector */
-body {
-    background-color: rgb(203, 203, 255);
-    font-family: "Times New Roman", serif;
-    margin: 20px;
-}
-
-p {
-    color: darkblue;
-    padding: 10px;
-    border: 2px solid purple;
-    margin: 15px;
-}
-
-/* ID selector */
 #intro {
-    color: rgb(19, 0, 128);
-    background-color: rgb(214, 214, 6);
-    padding: 15px;
-    border: 3px solid rgb(128, 0, 77);
-    margin: 20px;
+    margin-top: 16px;
+    margin-bottom: 12px;
+    color: var(--accent);
+    font-size: clamp(2.25rem, 7vw, 4rem);
 }
 
-/* Class selector */
-.about {
-    color: darkblue;
-    background-color: rgb(255, 240, 224);
-    padding: 10px;
-    border: 2px solid rgb(28, 0, 128);
-    margin: 15px;
+body > p {
+    max-width: 720px;
+    margin: 0 auto 24px;
+    color: var(--muted);
 }
 
-.card-grid{
+body > h3 {
+    margin-top: 32px;
+    margin-bottom: 16px;
+    color: var(--ink);
+}
+
+.card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.card-grid > div {
+    min-width: 0;
+    padding: 24px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--card);
+    box-shadow: 0 8px 24px rgb(32 48 43 / 6%);
+}
+
+.about {
+    margin: 0 0 16px;
+    color: var(--accent);
+    font-size: 1.25rem;
+}
+
+.card-grid img {
+    display: block;
+    width: min(100%, 240px);
+    height: auto;
+    aspect-ratio: 4 / 5;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.card-grid ul,
+.card-grid ol {
+    margin: 0;
+    padding-left: 24px;
+    color: var(--muted);
+}
+
+.card-grid li + li {
+    margin-top: 8px;
+}
+
+@media (max-width: 767px) {
+    body {
+        padding: 20px;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .card-grid > div {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 479px) {
+    body {
+        padding: 16px;
+    }
+
+    .card-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
 }
